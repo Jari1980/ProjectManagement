@@ -5,12 +5,14 @@ import com.projectmanagemant.ProjectManagement.DTO.ProjectResponseDTO;
 import com.projectmanagemant.ProjectManagement.DTO.ProjectUpdateRequestDTO;
 import com.projectmanagemant.ProjectManagement.entity.Project;
 import com.projectmanagemant.ProjectManagement.repo.ProjectRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class ProjectService {
 
     private final ProjectRepository projectRepository;

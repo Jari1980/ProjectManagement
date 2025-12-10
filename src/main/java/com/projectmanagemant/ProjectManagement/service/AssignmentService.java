@@ -8,12 +8,14 @@ import com.projectmanagemant.ProjectManagement.entity.Developer;
 import com.projectmanagemant.ProjectManagement.entity.Task;
 import com.projectmanagemant.ProjectManagement.repo.AssignmentRepository;
 import com.projectmanagemant.ProjectManagement.repo.TaskRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class AssignmentService {
 
     private final AssignmentRepository assignmentRepository;
